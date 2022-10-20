@@ -3,13 +3,14 @@ body {
   font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
   font-size: 14px;
   font-weight: 500;
+  margin: 0;
 }
 
 .menu-bar {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   padding: 15px 0;
   background-color: white;
   display: flex;
@@ -83,6 +84,7 @@ body {
 /*メニューの中身の設定*/
 .menu-content {
   margin: 0;
+  box-sizing: border-box;
   padding: 20px 0;
   position: fixed;
   width: 100%;
@@ -125,28 +127,157 @@ body {
 .menu-content .last-item {
   margin-top: 20px;
 }
-.menu-content .last-item a{
+.menu-content .last-item a {
   background-color: #f79214;
   border-radius: 9999px;
   color: white;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0;
+  box-sizing: border-box;
   padding: 0 20px;
   height: 60px;
-  width: 210px;
+  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 /* --- ハンバーガーメニュー　ここまで --- */
 
-/*.header-image {*/
-/*  margin-top: 51px;*/
-/*  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);*/
-/*  width: 100%;*/
-/*}*/
-
-.link-counseling-bottom a img {
-  width:100%;
+/*ヘッダー画像　ここから*/
+.header-image {
+  margin-top: 52px;
+  width: 100%;
+  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+h1 {
+  margin-top: 66vw;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: Lato,"Hiragino Kaku Gothic Pro",sans-serif;
+}
+
+.advertisement-image {
+  margin-bottom: 30px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.advertisement-image img {
+  width: 27.5%;
+}
+.advertisement-image img:nth-of-type(2) {
+  width: 40%;
+}
+
+.header-image {
+  margin-bottom: 35px;
+}
+.header-image > .link {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  width: 100%;
+}
+.header-image > .link a {
+  background-color: #f79214;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  box-sizing: border-box;
+  padding: 0 20px;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-image > .link a:last-child {
+  display: none;
+}
+
+.header-image .annotation {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
+}
+.header-image .annotation p {
+  margin: 0;
+  color: #a2a2a4;
+  font-size: 12px;
+}
+/*ヘッダー画像　ここまで*/
+
+/*ポテパンキャンプとは　ここから*/
+.about-school {
+  background-color: #f79214;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 20px;
+  margin-bottom: 114px;
+}
+.about-school video {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.about-school h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Lato,YuGothic,sans-serif;
+  color: white;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.about-school > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+.about-school > a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.about-school > a img {
+  margin-right: 5px;
+}
+/*ポテパンキャンプとは　ここまで*/
+
+/*画面下部の無料カウンセリングへのリンク　ここから*/
+.link-counseling-bottom {
+  position: fixed;
+  bottom: 0;
+  background-color: #f4f5f7;
+  width:100%;
+  height: 114px;
+  z-index: 100;
+}
+.link-counseling-bottom a {
+  display: flex;
+  justify-content: center;
+}
+.link-counseling-bottom a img {
+  margin: -4px auto 28px;
+  width: 98%;
+  max-width: 367px;
+}
+/*画面下部の無料カウンセリングへのリンク　ここまで*/
