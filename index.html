@@ -2,58 +2,73 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>サイト模写</title>
     <link rel="stylesheet" href="style.css">
+    <!--Google Fontsの読み込み　ここから-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <!--Google Fontsの読み込み　ここまで-->
   </head>
 
   <body>
-    <!--ヘッダー部分開始-->
+    <!--ヘッダー部分　ここから-->
     <section class="header">
       <div class="menu-bar">
-        <a href="https://camp.potepan.com/">
+        <a
+          href="https://camp.potepan.com/"
+          class="service-logo"
+        >
           <img
             src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/header-logo.png.webp"
             alt="サービスロゴ"
           >
         </a>
         
-        <ul class="menus">
-          <div class="menu-others">
+        <div class="hamburger-menu">
+          <input
+            type="checkbox"
+            id="checkbox-for-menu-button"
+          > <!--ハンバーガーメニューの展開を制御するチェックボックス-->
+          <label
+            for="checkbox-for-menu-button"
+            class="menu-button"
+          ><span></span></label> <!--ハンバーガーメニューのボタン-->
+          
+          <ul class="menu-content">
             <li>
               <a href="https://camp.potepan.com/content">
-                CONTENT<br>学習内容
+                <span>CONTENT</span><br>学習内容
               </a>
             </li>
             <li>
               <a href="https://camp.potepan.com/interview">
-                INTERVIEW<br>受講生の声
+                <span>INTERVIEW</span><br>受講生の声
               </a>
             </li>
             <li>
               <a href="https://camp.potepan.com/faq">
-                FAQ<br>よくある質問
+                <span>FAQ</span><br>よくある質問
               </a>
             </li>
             <li>
               <a href="https://camp.potepan.com/recruit">
-                RECRUIT<br>採用企業様へ
+                <span>RECRUIT</span><br>採用企業様へ
               </a>
             </li>
             <li>
               <a href="https://camp.potepan.com/download">
-                DOCUMENT<br>資料請求
+                <span>DOCUMENT</span><br>資料請求
               </a>
             </li>
-          </div>
-          
-          <div class="menu-counseling">
-            <li>
+            <li class="last-item">
               <a href="https://camp.potepan.com/contact">
                 無料カウンセリング
               </a>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
       
       <div class="header-image">
@@ -94,14 +109,14 @@
         </div>
       </div>
     </section>
-    <!--ヘッダー部分終了-->
+    <!--ヘッダー部分　ここまで-->
     
-    <!--「ポテパンキャンプとは」開始-->
+    <!--「ポテパンキャンプとは」　ここから-->
     <section>
       <h2>ポテパンキャンプとは</h2>
       <video
         src="https://res.cloudinary.com/hqt02ldfz/video/upload/v1650946041/IntroductionMovie/PotepanCamp/movie_sxheh6.mp4"
-        height="300"
+        height="100"
         controls
         autoplay
         muted
@@ -118,10 +133,10 @@
         学習内容はこちら
       </a>
     </section>
-    <!--「ポテパンキャンプとは」終了-->
+    <!--「ポテパンキャンプとは」　ここまで-->
     
-    <!--画面下部の無料カウンセリングへのリンク開始-->
-    <section>
+    <!--画面下部の無料カウンセリングへのリンク　ここから-->
+    <section class="link-counseling-bottom">
       <a href="https://camp.potepan.com/contact">
         <img
           src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/fixed-footer/counseling-button.png.webp"
@@ -129,7 +144,7 @@
         >
       </a>
     </section>
-    <!--画面下部の無料カウンセリングへのリンク終了-->
+    <!--画面下部の無料カウンセリングへのリンク　ここまで-->
 
   </body>
 </html>

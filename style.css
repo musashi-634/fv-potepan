@@ -1,0 +1,152 @@
+body {
+  color: #333;
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*サービスロゴの設定*/
+.service-logo {
+  margin: 0 20px;
+  height: 21px;
+  position: relative;
+}
+.service-logo img {
+  height: 16px;
+  position: absolute;
+  top: 0;
+}
+
+/* --- ハンバーガーメニュー　ここから --- */
+/*メニューの背景の設定*/
+.hamburger-menu {
+  margin: 0 20px;
+}
+.menu-button {
+  height: 21px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+/*メニューの三本線の設定*/
+.menu-button span,
+.menu-button span::before,
+.menu-button span::after {
+  content: '';  /*擬似要素用の箱を用意*/
+  display: block;  /*ブロック要素に変換*/
+  background-color: #333;
+  height: 3px;
+  width: 30px;
+  border-radius: 9999px;  /*短辺を半円にする設定*/
+  position: absolute;
+}
+.menu-button span::before {
+  bottom: 10px;
+}
+.menu-button span::after {
+  top: 10px;
+}
+
+/*メニュー展開時にバツ印へと変更する設定*/
+#checkbox-for-menu-button:checked ~ .menu-button span {
+  background-color: rgba(255, 255, 255, 0);  /*真ん中の線を透明にする*/
+}
+#checkbox-for-menu-button:checked ~ .menu-button span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#checkbox-for-menu-button:checked ~ .menu-button span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/*ハンバーガーメニュー用のチェックボックスを非表示*/
+#checkbox-for-menu-button {
+  display: none;
+}
+
+/*メニューの中身の設定*/
+.menu-content {
+  margin: 0;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 51px;
+  left: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.8);
+}
+#checkbox-for-menu-button:checked ~ .menu-content {
+  left: 0;
+}
+.menu-content li{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.menu-content li a{
+  text-align: center;
+  color: #f79214;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  /*margin: 10px;*/
+  padding: 20px 0;
+}
+.menu-content li a br {
+  display: none;
+}
+.menu-content li a span {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-family: 'Lato',sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+.menu-content .last-item {
+  margin-top: 20px;
+}
+.menu-content .last-item a{
+  background-color: #f79214;
+  border-radius: 9999px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 0 20px;
+  height: 60px;
+  width: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* --- ハンバーガーメニュー　ここまで --- */
+
+/*.header-image {*/
+/*  margin-top: 51px;*/
+/*  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);*/
+/*  width: 100%;*/
+/*}*/
+
+.link-counseling-bottom a img {
+  width:100%;
+}
