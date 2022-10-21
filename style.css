@@ -47,6 +47,9 @@ body {
   align-items: center;
   z-index: 20;
 }
+.menu-button:hover {
+  cursor: pointer;
+}
 
 /*メニューの三本線の設定*/
 .menu-button span,
