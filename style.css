@@ -26,7 +26,7 @@ body {
   left: 0;
   top: 0;
   width: 100vw;
-  padding: 15px 0;
+  padding: 15px 20px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,6 @@ body {
 
 /*サービスロゴの設定*/
 .service-logo {
-  margin: 0 20px;
   height: 21px;
   position: relative;
 }
@@ -48,7 +47,6 @@ body {
 /* --- ハンバーガーメニュー　ここから --- */
 /*メニューの背景の設定*/
 .hamburger-menu {
-  margin: 0 20px;
 }
 .menu-button {
   height: 21px;
@@ -161,9 +159,12 @@ body {
 }
 /* --- ハンバーガーメニュー　ここまで --- */
 
-/*ヘッダー画像　ここから*/
-.main-image {
+/*メイン画像　ここから*/
+main {
   margin-top: 52px;
+}
+.main-image {
+  padding: 0 20px;
   width: 100%;
   background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);
   background-size: contain;
@@ -173,18 +174,23 @@ body {
   align-items: center;
 }
 
+.main-image-contents-container {
+  margin-top: 65vw;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
 h1 {
-  margin-top: 66vw;
-  margin-bottom: 15px;
+  margin: 0 -20px 15px;
   text-align: center;
   font-size: 25px;
   font-weight: 900;
-  font-family: Lato,"Hiragino Kaku Gothic Pro",sans-serif;
+  line-height: 36px;
+  font-family: 'Lato',"Hiragino Kaku Gothic Pro",sans-serif;
 }
 
 .advertisement-image {
   margin-bottom: 30px;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -199,39 +205,36 @@ h1 {
 .main-image {
   margin-bottom: 35px;
 }
-.main-image > .link {
-  margin-bottom: 20px;
-  padding: 0 20px;
+.main-image-contents-container > .link {
   width: 100%;
 }
-.main-image > .link a {
+.main-image-contents-container > .link a {
   background-color: #f79214;
   border-radius: 9999px;
   text-decoration: none;
   color: white;
   font-size: 16px;
   font-weight: 700;
-  padding: 0 20px;
   height: 64px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-.main-image > .link a:last-child {
+.main-image-contents-container > .link a:last-child {
   display: none;
 }
 
 .main-image .annotation {
   width: 100%;
-  padding: 0 20px;
 }
 .main-image .annotation p {
   margin: 0;
   color: #a2a2a4;
   font-size: 12px;
 }
-/*ヘッダー画像　ここまで*/
+/*メイン画像　ここまで*/
 
 /*ポテパンキャンプとは　ここから*/
 .about-school {
@@ -249,10 +252,14 @@ h1 {
 .about-school h2 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: Lato,YuGothic,sans-serif;
+  font-family: 'Lato',YuGothic,sans-serif;
   color: white;
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: .1em;
+  line-height: 54px;
+}
+.about-school > h2 > span {
   letter-spacing: 1px;
 }
 .about-school > p {
@@ -260,12 +267,13 @@ h1 {
   margin-bottom: 16px;
   color: white;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
+  line-height: 26px;
 }
 .about-school > a {
   text-decoration: none;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   color: white;
   display: flex;
   align-items: center;
@@ -305,6 +313,9 @@ h1 {
     right: 4px;
     width: auto;
   }
+  .fixed-footer a img {
+    width: 100%;
+  }
 }
 
 
@@ -312,7 +323,66 @@ h1 {
 /* 768px〜1024px：タブレット
 ------------------------------ */
 @media screen and (min-width:768px) {
+  main {
+    margin-top: 60px;
+  }
   
+  .menu-bar {
+    padding: 20px 36px;
+  }
+  .service-logo img {
+    height: 20px;
+  }
+  .menu-content {
+    top: 60px;
+  }
+  
+  .main-image {
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+    padding: 100px 50px 28px 50px;
+  }
+  .main-image-contents-container {
+    margin: 0 auto 70px 0;
+    width: fit-content;
+  }
+  h1 {
+    margin: 0 0 15px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 54px;
+  }
+  .advertisement-image {
+    margin-bottom: 25px;
+    justify-content: space-around;
+  }
+  .advertisement-image img {
+    width: 25.5%;
+  }
+  .main-image-contents-container > .link {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-image-contents-container > .link a {
+    width: 306px;
+  }
+  .main-image-contents-container > .link a:last-child {
+    display: flex;
+    width: 176px;
+    background-color: white;
+    color: #333;
+    border: 1px solid;
+    border-color: #e0e0e0;
+  }
+  
+  .about-school {
+    padding: 44px 17%;
+  }
+  .about-school h2 > span {
+    letter-spacing: .1em;
+  }
 }
 
 
