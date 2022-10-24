@@ -164,6 +164,7 @@ main {
   margin-top: 52px;
 }
 .main-image {
+  margin-bottom: 35px;
   padding: 0 20px;
   width: 100%;
   background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);
@@ -176,8 +177,10 @@ main {
 
 .main-image-contents-container {
   margin-top: 65vw;
-  margin-bottom: 20px;
   width: 100%;
+}
+.main-image-contents {
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -202,13 +205,10 @@ h1 {
   width: 40%;
 }
 
-.main-image {
-  margin-bottom: 35px;
-}
-.main-image-contents-container > .link {
+.main-image-contents > .link {
   width: 100%;
 }
-.main-image-contents-container > .link a {
+.main-image-contents > .link a {
   background-color: #f79214;
   border-radius: 9999px;
   text-decoration: none;
@@ -222,14 +222,14 @@ h1 {
   align-items: center;
   text-align: center;
 }
-.main-image-contents-container > .link a:last-child {
+.main-image-contents > .link a:last-child {
   display: none;
 }
 
-.main-image .annotation {
+.main-image-annotation {
   width: 100%;
 }
-.main-image .annotation p {
+.main-image-annotation p {
   margin: 0;
   color: #a2a2a4;
   font-size: 12px;
@@ -239,13 +239,14 @@ h1 {
 /*ポテパンキャンプとは　ここから*/
 .about-school {
   background-color: #f79214;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  padding: 30px 20px;
+  padding: 30px 0;
   margin-bottom: 114px;
 }
-.about-school video {
+.about-school-container {
+  padding: 0 20px;
+}
+.about-school-container video {
   margin-bottom: 16px;
   width: 100%;
 }
@@ -342,10 +343,15 @@ h1 {
     background-size: cover;
     background-position: center;
     margin-bottom: 0;
-    padding: 100px 50px 28px 50px;
+    padding: 100px 0 28px 0;
   }
   .main-image-contents-container {
-    margin: 0 auto 70px 0;
+    margin-top: 0;
+    padding: 0 50px 0;
+    max-width: 1140px;
+  }
+  .main-image-contents {
+    margin-bottom: 70px;
     width: fit-content;
   }
   h1 {
@@ -361,14 +367,14 @@ h1 {
   .advertisement-image img {
     width: 25.5%;
   }
-  .main-image-contents-container > .link {
+  .main-image-contents > .link {
     display: flex;
     justify-content: space-between;
   }
-  .main-image-contents-container > .link a {
+  .main-image-contents > .link a {
     width: 306px;
   }
-  .main-image-contents-container > .link a:last-child {
+  .main-image-contents > .link a:last-child {
     display: flex;
     width: 176px;
     background-color: white;
@@ -378,7 +384,10 @@ h1 {
   }
   
   .about-school {
-    padding: 44px 17%;
+    padding: 44px 0;
+  }
+  .about-school-container {
+    padding: 0 17%;
   }
   .about-school-text h2 > span {
     letter-spacing: .1em;
@@ -391,12 +400,18 @@ h1 {
 ------------------------------ */
 @media screen and (min-width:1025px) {
   .about-school {
-    padding: 44px 50px;
-    flex-direction: row;
+    padding: 44px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .about-school-container {
+    padding: 0 50px;
+    max-width: 1140px;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
-  .about-school video {
+  .about-school-container video {
     margin-bottom: 0;
     width: 50%;
   }
