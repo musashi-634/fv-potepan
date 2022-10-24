@@ -331,11 +331,17 @@ h1 {
   .menu-bar {
     padding: 20px 36px;
   }
+  .service-logo:hover {
+    opacity: 0.8;
+  }
   .service-logo img {
     height: 20px;
   }
   .menu-content {
     top: 60px;
+  }
+  .menu-content li:hover {
+    opacity: 0.8;
   }
   
   .main-image {
@@ -381,6 +387,9 @@ h1 {
     color: #333;
     border: 1px solid;
     border-color: #e0e0e0;
+  }
+  .main-image-contents > .link a:hover {
+    opacity: 0.8;
   }
   
   .about-school {
